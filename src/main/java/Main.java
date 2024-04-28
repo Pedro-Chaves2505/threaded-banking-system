@@ -13,6 +13,15 @@ public class Main {
     account.withdraw(120);
     System.out.println(account.deposit(180));
 
+    Bank bank = new Bank();
+    Account account1 = new Account(300);
+
+    System.out.println(account.getBalance());
+    System.out.println(account1.getBalance());
+    bank.transfer(account, account1, 100);
+    System.out.println(account.getBalance());
+    System.out.println(account1.getBalance());
+    
   }
 
   // @Test
