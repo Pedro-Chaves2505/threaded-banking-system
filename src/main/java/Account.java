@@ -1,7 +1,8 @@
 public class Account {
   private float balance;
+  private Bank bank;
 
-  public Account(float balance) {
+  public Account(Bank bank, float balance) {
     this.balance = balance;
   }
 
