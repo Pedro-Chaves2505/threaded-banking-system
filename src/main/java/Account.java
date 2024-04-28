@@ -3,6 +3,7 @@ public class Account {
   private Bank bank;
 
   public Account(Bank bank, float balance) {
+    this.bank = bank;
     this.balance = balance;
   }
 
@@ -10,6 +11,10 @@ public class Account {
     return balance;
   }
 
+  public Bank getBank() {
+    return bank;
+  }
+  
   public float withdraw(float ammount){
     if(ammount > balance){
       System.out.println("Não é possível tirar mais do que o saldo");

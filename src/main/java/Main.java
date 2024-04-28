@@ -7,21 +7,15 @@ public class Main {
     System.out.println("Hello world!");
     Bank bank = new Bank();
 
-    Account account = new Account(bank, 100);
-    System.out.println(account.getBalance());
-    account.withdraw(20);
-    System.out.println(account.getBalance());
-    account.withdraw(120);
-    System.out.println(account.deposit(180));
+    Store store1 = new Store(bank);
+    Client client = new Client(bank);
 
-    Account account1 = new Account(bank, 300);
+    System.out.println(client.getAccount().getBalance());
+    System.out.println(store1.getAccount().getBalance());
+    client.buy(store1);
 
-    System.out.println(account.getBalance());
-    System.out.println(account1.getBalance());
-    bank.transfer(account, account1, 100);
-    System.out.println(account.getBalance());
-    System.out.println(account1.getBalance());
-    
+      System.out.println(client.getAccount().getBalance());
+      System.out.println(store1.getAccount().getBalance());
   }
 
   // @Test
